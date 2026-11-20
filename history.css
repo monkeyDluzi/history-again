@@ -1,3 +1,5 @@
+/* PANEL SYSTEM */
+
 .panel {
     display: none;
 }
@@ -6,25 +8,29 @@
     display: block;
 }
 
+
+/* NAVIGATION BAR */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     padding: 20px 50px;
+    background-color: #1c1b19;
 }
+
+
+/* NAVIGATION LINKS */
 
 .nav-links {
     display: flex;
     gap: 25px;
 }
 
-.navbar {
-    background-color: #1c1b19;
-}
-
 .nav-links button {
     color: white;
     background: none;
     border: none;
+    cursor: pointer;
 }
