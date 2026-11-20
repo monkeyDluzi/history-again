@@ -1,5 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+    <!-- Website name -->
+    <title>George Coles | Historical Archive</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="history.css">
+
+    <!-- Website logo -->
+    <link rel="icon" href="someguy.jpeg">
+</head>
+
 <body>
 
+    <!-- Navigation bar -->
     <nav class="navbar">
 
         <button class="logo" onclick="showPanel('home')">
@@ -14,8 +39,10 @@
 
     </nav>
 
+    <!-- Main content -->
     <main>
 
+        <!-- Home panel -->
         <div id="home" class="panel active">
 
             <section class="hero">
@@ -35,24 +62,36 @@
                     of George Coles.
                 </p>
 
-                <button>Explore history →</button>
+                <button onclick="showPanel('history')">
+                    Explore history →
+                </button>
 
             </section>
 
         </div>
 
+        <!-- History panel -->
         <div id="history" class="panel">
+
             <h1>Early History</h1>
+
             <p>Learn about George Coles's early life.</p>
+
         </div>
 
+        <!-- Legacy panel -->
         <div id="legacy" class="panel">
+
             <h1>His Legacy</h1>
+
             <p>Discover his impact on Prince Edward Island.</p>
+
         </div>
 
     </main>
 
+    <!-- JavaScript -->
     <script src="history.js"></script>
 
 </body>
+</html>
