@@ -34,3 +34,27 @@
     border: none;
     cursor: pointer;
 }
+
+.logo {
+    font-family: 'BBH Bogle', sans-serif;
+    font-size: 22px;
+    color: #d6bd91;
+    background: none;
+    border: none;
+}
+.nav-links button {
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+
+    color: #e8e0d2;
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.nav-links button:hover {
+    color: #d6bd91;
+    transform: translateY(-3px);
+}
