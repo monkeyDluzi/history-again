@@ -58,3 +58,16 @@
     color: #d6bd91;
     transform: translateY(-3px);
 }
+
+/* HERO SECTION */
+.hero {
+    min-height: 75vh;
+    padding: 100px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #211f1b;
+    color: #e8e0d2;
+}
