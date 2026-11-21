@@ -1,8 +1,14 @@
-/* 1. RESET BROWSER MARGINS (Fixes the white gap around the screen) */
+/* 1. RESET BROWSER MARGINS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: #14120f;
+    color: #e8e0d2;
+    font-family: 'EB Garamond', serif;
 }
 
 /* PANEL SYSTEM */
@@ -23,7 +29,6 @@
     background-color: #1c1b19;
 }
 
-/* NAVIGATION LINKS */
 .nav-links {
     display: flex;
     gap: 25px;
@@ -56,23 +61,62 @@
 /* HERO SECTION */
 .hero {
     width: 100%;
-    /* Fills the rest of the screen below your navbar */
-    min-height: calc(100vh - 68px); 
-    padding: 100px 50px;
-    color: #ffffff; /* Ensures your text is readable over the dark overlay */
+    min-height: calc(100vh - 68px); /* Fills the rest of the screen below navbar */
+    padding: 60px 80px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
 
     /* Shows the full map without cropping */
     background: 
-        linear-gradient(rgba(20, 18, 15, 0.65), rgba(20, 18, 15, 0.65)),
+        linear-gradient(rgba(20, 18, 15, 0.72), rgba(20, 18, 15, 0.72)),
         url("image/map.jfif") center / contain no-repeat #14120f;
 
-    .hero {
-    /* ... keep your existing hero styles ... */
-    border: 8px solid transparent !important;
-    border-image: linear-gradient(45deg, #a67c37, #f3e5ab, #c5a059) 1 !important;
+    /* Gold Frame */
+    border: 8px solid #d6bd91;
 }
+
+/* HERO TEXT & BUTTON STYLING */
+.hero h1 {
+    font-family: 'BBH Bogle', sans-serif;
+    font-size: 64px;
+    color: #d6bd91;
+    letter-spacing: 1px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    font-weight: 400;
+    color: #f5efe6;
+    max-width: 650px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #cfc5b4;
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+.hero button {
+    margin-top: 12px;
+    padding: 12px 28px;
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #14120f;
+    background-color: #d6bd91;
+    border: 2px solid #d6bd91;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.hero button:hover {
+    background-color: transparent;
+    color: #d6bd91;
+}
+
 
