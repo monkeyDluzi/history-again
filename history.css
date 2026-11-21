@@ -71,6 +71,8 @@
         url("image/map.jfif") center / contain no-repeat #14120f;
 
     .hero {
-    border: 8px solid #d6bd91 !important;
+    /* ... keep your existing hero styles ... */
+    border: 8px solid transparent !important;
+    border-image: linear-gradient(45deg, #a67c37, #f3e5ab, #c5a059) 1 !important;
 }
 
