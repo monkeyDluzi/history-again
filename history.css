@@ -84,7 +84,7 @@ body {
     /* Shows the full map without cropping */
     background: 
         linear-gradient(rgba(20, 18, 15, 0.72), rgba(20, 18, 15, 0.72)),
-        url("image/map.jfif") center / contain no-repeat #14120f;
+        url("image/cole.jfif") center / contain no-repeat #14120f;
 
     /* Gold Frame */
     border: 8px solid #d6bd91;
