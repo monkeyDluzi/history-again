@@ -1,5 +1,11 @@
-/* PANEL SYSTEM */
+/* 1. RESET BROWSER MARGINS (Fixes the white gap around the screen) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* PANEL SYSTEM */
 .panel {
     display: none;
 }
@@ -8,31 +14,19 @@
     display: block;
 }
 
-
 /* NAVIGATION BAR */
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 20px 50px;
     background-color: #1c1b19;
 }
 
-
 /* NAVIGATION LINKS */
-
 .nav-links {
     display: flex;
     gap: 25px;
-}
-
-.nav-links button {
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
 }
 
 .logo {
@@ -42,16 +36,16 @@
     background: none;
     border: none;
 }
+
 .nav-links button {
     font-family: 'EB Garamond', serif;
     font-size: 18px;
     font-weight: 600;
-
     color: #e8e0d2;
     background: none;
     border: none;
-
     cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .nav-links button:hover {
@@ -61,24 +55,21 @@
 
 /* HERO SECTION */
 .hero {
-    min-height: 75vh;
+    width: 100%;
+    /* Fills the rest of the screen below your navbar */
+    min-height: calc(100vh - 68px); 
     padding: 100px 50px;
-    box-sizing: border-box;
+    color: #ffffff; /* Ensures your text is readable over the dark overlay */
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    background-image:
-        linear-gradient(
-            rgba(20, 18, 15, 0.65),
-            rgba(20, 18, 15, 0.65)
-        ),
-        url("image/map.jfif");
+    /* Shows the full map without cropping */
+    background: 
+        linear-gradient(rgba(20, 18, 15, 0.65), rgba(20, 18, 15, 0.65)),
+        url("image/map.jfif") center / contain no-repeat #14120f;
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    border: 8px solid blck !important;
+    /* Fixed typo: "blck" -> "black" */
+    border: 8px solid black !important;
 }
