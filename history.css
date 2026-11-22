@@ -20,12 +20,19 @@ body {
     display: block;
 }
 
-/* Give History & Legacy panels breathing room */
 #history.panel.active,
 #legacy.panel.active {
-    padding: 80px 50px;
-    max-width: 900px;
+    padding: 70px 50px;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+#history h1,
+#legacy h1 {
+    font-family: 'BBH Bogle', sans-serif;
+    font-size: 48px;
+    color: #f5efe6;
+    margin: 8px 0 40px 0;
 }
 
 /* NAVIGATION BAR */
@@ -64,15 +71,20 @@ body {
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.nav-links button:hover {
+.nav-links button:hover,
+.nav-links button.active {
     color: #d6bd91;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
+}
+
+.nav-links button.active {
+    border-bottom: 2px solid #d6bd91;
 }
 
 /* HERO SECTION */
 .hero {
     width: 100%;
-    min-height: calc(100vh - 69px); /* Fills the rest of the screen below navbar */
+    min-height: calc(100vh - 69px);
     padding: 60px 80px;
 
     display: flex;
@@ -81,16 +93,15 @@ body {
     align-items: flex-start;
     gap: 16px;
 
-    /* Shows the full map without cropping */
+    /* Shows full map without cropping */
     background: 
         linear-gradient(rgba(20, 18, 15, 0.72), rgba(20, 18, 15, 0.72)),
-        url("image/cole.jfif") center / contain no-repeat #14120f;
+        url("image/map.jfif") center / contain no-repeat #14120f;
 
     /* Gold Frame */
     border: 8px solid #d6bd91;
 }
 
-/* EYEBROW ("HISTORICAL ARCHIVE · 1810–1875") */
 .eyebrow {
     font-size: 14px;
     font-weight: 700;
@@ -99,10 +110,9 @@ body {
     text-transform: uppercase;
 }
 
-/* HERO HEADINGS & TEXT */
 .hero h1 {
     font-family: 'BBH Bogle', sans-serif;
-    font-size: clamp(48px, 6vw, 76px); /* Scales smoothly on different screens */
+    font-size: clamp(48px, 6vw, 76px);
     color: #f5efe6;
     line-height: 1.1;
 }
@@ -122,7 +132,6 @@ body {
     line-height: 1.6;
 }
 
-/* EXPLORE HISTORY BUTTON */
 .hero button {
     margin-top: 16px;
     padding: 14px 32px;
@@ -142,4 +151,126 @@ body {
     color: #d6bd91;
     transform: translateY(-2px);
 }
+
+/* ARCHIVE CARDS (History & Legacy Panels) */
+.archive-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: #1c1b19;
+    border: 2px solid rgba(214, 189, 145, 0.35);
+}
+
+.archive-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.archive-card img {
+    width: 260px;
+    height: 300px;
+    object-fit: cover;
+    object-position: top center;
+    border: 4px solid #d6bd91;
+    flex-shrink: 0;
+}
+
+.archive-text p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #e8e0d2;
+}
+
+/* AUDIO & IMAGE EXHIBIT */
+.audio-exhibit {
+    margin-top: 50px;
+    padding: 40px;
+    background-color: #1c1b19;
+    border: 4px solid #d6bd91;
+}
+
+.exhibit-header h2 {
+    font-family: 'BBH Bogle', sans-serif;
+    font-size: 32px;
+    color: #f5efe6;
+    margin: 8px 0 12px 0;
+}
+
+.exhibit-header p {
+    font-size: 19px;
+    color: #cfc5b4;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-bottom: 24px;
+}
+
+.gold-btn {
+    padding: 12px 28px;
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #14120f;
+    background-color: #d6bd91;
+    border: 2px solid #d6bd91;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.gold-btn:hover,
+.gold-btn.playing {
+    background-color: transparent;
+    color: #d6bd91;
+}
+
+.exhibit-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 35px;
+}
+
+.exhibit-frame {
+    background-color: #14120f;
+    border: 3px solid #d6bd91;
+    padding: 12px;
+    text-align: center;
+}
+
+.exhibit-frame img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.exhibit-frame figcaption {
+    margin-top: 10px;
+    font-size: 16px;
+    font-style: italic;
+    color: #d6bd91;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .navbar,
+    .hero,
+    #history.panel.active,
+    #legacy.panel.active {
+        padding: 30px 20px;
+    }
+
+    .archive-card,
+    .archive-card.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .archive-card img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
 
