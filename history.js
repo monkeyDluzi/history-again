@@ -10,7 +10,7 @@ function showPanel(panelId) {
         targetPanel.classList.add('active');
     }
 
-    // 3. Highlight the active nav button (optional)
+    // 3. Highlight the active nav button
     document.querySelectorAll('.nav-links button').forEach(btn => {
         btn.classList.remove('active');
         if (btn.getAttribute('onclick') === `showPanel('${panelId}')`) {
@@ -18,7 +18,23 @@ function showPanel(panelId) {
         }
     });
 
-    // 4. Scroll smoothly back to the top of the page
+    // 4. Scroll smoothly to the top
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+function toggleArchiveAudio() {
+    const audio = document.getElementById('archive-audio');
+    const btn = document.getElementById('audio-btn');
+
+    if (audio.paused) {
+        audio.play();
+        btn.textContent = '⏸ Pause Historical Audio';
+        btn.classList.add('playing');
+    } else {
+        audio.pause();
+        btn.textContent = '▶ Play Historical Audio';
+        btn.classList.remove('playing');
+    }
+}
+
 
